@@ -34,13 +34,11 @@
   }
   .container {
     display: flex;
-    flex: 1;
     max-width: 100%;
   }
 
   .content {
     flex: 1;
-    align-items: center;
-    justify-items: center;
+    padding: 0px 0px 0px 90px;
   }
 </style>

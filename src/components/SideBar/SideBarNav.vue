@@ -1,6 +1,6 @@
 <template>
   <div
-    class="side-bar-nav fixed flex items-center flex-col h-screen bg-gray-100"
+    class="side-bar-nav fixed flex items-center flex-col h-screen bg-gray-100 z-50"
   >
     <div class="p-4 text-black">
       <div
@@ -62,11 +62,14 @@
       <ul
         v-for="(item, index) in navLink"
         :key="index"
-        class="hover:bg-gray-200 w-20 h-20 rounded-lg flex items-center justify-center"
+        class="bg-slate-100 w-[72px] h-[72px] my-2 rounded-2xl flex items-center justify-center"
       >
-        <router-link :to="item.path">
+        <router-link
+          :to="item.path"
+          :class="{ 'bg-gray-200 rounded-2xl': item.path === '/' }"
+        >
           <li
-            class="py-4 text-xs font-medium flex flex-col items-center justify-center hover:bg-gray-200"
+            class="py-4 text-xs font-medium flex flex-col items-center justify-center rounded-2xl w-[72px] h-[72px] cursor-pointer hover:bg-zinc-200 transition-all duration-200"
           >
             <svg
               :xmlns="item.icon.xmlns"
