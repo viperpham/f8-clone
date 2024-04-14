@@ -4,7 +4,7 @@
     <div class="container">
       <SideBar />
       <div class="content">
-        <Content />
+        <HomeWrapper />
       </div>
     </div>
   </div>
@@ -14,12 +14,14 @@
   import Header from '../components/Header/Header.vue';
   import SideBar from '../components/SideBar/SideBarNav.vue';
   import Content from '../components/Content/SlideContent.vue';
+  import HomeWrapper from '../components/Home/HomeWrapper.vue';
 
   export default {
     components: {
       Header,
       SideBar,
-      Content,
+
+      HomeWrapper,
     },
     setup() {
       return {};
