@@ -1,4 +1,10 @@
 <template>
+  <div
+    class="fixed z-50 inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50"
+    v-if="isToggleModal"
+  >
+    <LoginModal />
+  </div>
   <div class="wrapper">
     <Header />
     <div class="container">
@@ -15,16 +21,21 @@
   import SideBar from '../components/SideBar/SideBarNav.vue';
   import Content from '../components/Content/SlideContent.vue';
   import HomeWrapper from '../components/Home/HomeWrapper.vue';
+  import LoginModal from '../components/Auth/LoginModal.vue';
+  import { mapState, mapActions } from 'vuex';
 
   export default {
     components: {
       Header,
       SideBar,
-
+      LoginModal,
       HomeWrapper,
     },
     setup() {
       return {};
+    },
+    computed: {
+      ...mapState(['isToggleModal']),
     },
   };
 </script>

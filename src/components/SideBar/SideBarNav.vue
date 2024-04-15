@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="side-bar-nav fixed flex items-center flex-col h-screen bg-gray-100 z-50"
-  >
+  <div class="side-bar-nav fixed flex items-center flex-col h-screen z-50">
     <div class="p-4 text-black">
       <div
         class="flex relative items-center justify-center bg-blue-600 border border-blue-600 rounded-full text-white cursor-pointer h-11 w-11 my-5 mx-auto mt-2 select-none hover:bg-blue-700"
@@ -62,14 +60,14 @@
       <ul
         v-for="(item, index) in navLink"
         :key="index"
-        class="bg-slate-100 w-[72px] h-[72px] my-2 rounded-2xl flex items-center justify-center"
+        class="w-[72px] h-[72px] my-2 rounded-2xl flex items-center justify-center"
       >
         <router-link
           :to="item.path"
           :class="{ 'bg-gray-200 rounded-2xl': item.path === '/' }"
         >
           <li
-            class="py-4 text-xs font-medium flex flex-col items-center justify-center rounded-2xl w-[72px] h-[72px] cursor-pointer hover:bg-zinc-200 transition-all duration-200"
+            class="py-4 text-xs font-medium flex flex-col items-center justify-center rounded-2xl w-[72px] h-[72px] cursor-pointer hover:bg-zinc-100 transition-all duration-200"
           >
             <svg
               :xmlns="item.icon.xmlns"

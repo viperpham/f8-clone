@@ -8,9 +8,9 @@
         </span>
       </h2>
     </div>
-    <div class="flex">
+    <div class="grid grid-cols-4">
       <section
-        class="mr-3 w-1/3"
+        class="mr-3 w-full"
         v-for="item in listCoursePro"
         :key="item.id"
       >
@@ -102,7 +102,7 @@
     white-space: nowrap;
     z-index: 1;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-60%);
     opacity: 0;
     bottom: 40%; /* Add this line */
     transition: all 0.3s ease 0s, bottom 0.3s ease 0s; /* Add this line */

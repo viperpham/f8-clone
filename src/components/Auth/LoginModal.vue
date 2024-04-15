@@ -5,7 +5,7 @@
   >
     <div class="flex justify-center items-center h-screen w-screen">
       <div
-        class="bg-white relative flex flex-col justify-center items-center rounded-2xl px-6 shadow-lg w-480 h-560"
+        class="bg-white relative flex flex-col justify-center items-center rounded-2xl px-6 shadow-lg w-[560px] h-[660px]"
       >
         <div
           class="absolute flex items-center justify-center left-0 top-0 mt-5 ml-5 w-8 h-8 rounded-full cursor-pointer"

@@ -1,5 +1,5 @@
 <template>
-  <section class="slide-show mt-5 justify-between rounded-xl right-0">
+  <section class="slide-show mt-5 justify-between rounded-xl right-1">
     <swiper
       :modules="modules"
       :slides-per-view="1"
@@ -96,7 +96,8 @@
 <style>
   .slide-show {
     height: 270px;
-    width: 1768px;
+
+    width: 1708px;
   }
 
   @media screen and (max-width: 1300px) {
