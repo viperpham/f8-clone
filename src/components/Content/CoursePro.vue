@@ -8,9 +8,9 @@
         </span>
       </h2>
     </div>
-    <div class="grid grid-cols-4">
+    <div class="flex">
       <section
-        class="mr-3 w-full"
+        class="w-full"
         v-for="item in listCoursePro"
         :key="item.id"
       >
@@ -67,7 +67,7 @@
     .course_pro_item {
       object-fit: cover;
       overflow: hidden;
-      width: 100%;
+      width: 387px;
     }
   }
   .course_pro_item .course-img {
@@ -101,19 +101,40 @@
     user-select: none;
     white-space: nowrap;
     z-index: 1;
-    left: 50%;
+    left: 55%;
     transform: translateX(-60%);
     opacity: 0;
-    bottom: 40%; /* Add this line */
-    transition: all 0.3s ease 0s, bottom 0.3s ease 0s; /* Add this line */
-    background-color: rgb(255, 255, 255); /* Add this line */
+    bottom: 30%;
+    transition: all 0.3s ease 0s, bottom 0.3s ease 0s;
+    background-color: rgb(255, 255, 255);
   }
 
   .course_pro_item:hover .course-button {
     opacity: 1;
     visibility: visible;
-    bottom: 50%; /* Modify this line */
-    transition: all 0.3s ease 0s, bottom 0.3s ease 0s; /* Modify this line */
+    bottom: 40%;
+    transition: all 0.3s ease 0s, bottom 0.3s ease 0s;
+  }
+  .course_link {
+    position: relative;
+    display: inline-block;
+  }
+
+  .course_link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transition: background-color 0.3s ease;
+    z-index: 0;
+    border-radius: 16px;
+  }
+
+  .course_link:hover::after {
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .labelCourse {

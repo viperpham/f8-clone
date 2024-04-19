@@ -1,5 +1,5 @@
 <template>
-  <div class="side-bar-nav fixed flex items-center flex-col h-screen z-50">
+  <div class="side-bar-nav fixed flex items-center flex-col h-screen z-40">
     <div class="p-4 text-black">
       <div
         class="flex relative items-center justify-center bg-blue-600 border border-blue-600 rounded-full text-white cursor-pointer h-11 w-11 my-5 mx-auto mt-2 select-none hover:bg-blue-700"

@@ -10,6 +10,7 @@ export const featuredArticle = [
       profile_link: '/@son-dang',
       avatar:
         'https://files.fullstack.edu.vn/f8-prod/user_avatars/1/64f9a2fd4e064.jpg',
+      avatar_crown: '/static/media/crown.8edf462029b3c37a7f673303d8d3bedc.svg',
     },
     reading_time: '6 phút đọc',
   },
@@ -24,6 +25,7 @@ export const featuredArticle = [
       profile_link: '/@son-dang',
       avatar:
         'https://files.fullstack.edu.vn/f8-prod/user_avatars/1/64f9a2fd4e064.jpg',
+      avatar_crown: '/static/media/crown.8edf462029b3c37a7f673303d8d3bedc.svg',
     },
     reading_time: '12 phút đọc',
   },

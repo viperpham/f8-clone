@@ -1,19 +1,38 @@
 <template>
   <div class="course">
-    <div>
+    <h3 class="text-sm text-slate-500 mb-0">391.583+ người khác đã học</h3>
+    <div class="flex justify-between items-center w-[1620px]">
       <h2>
         <span>
-          Khóa học Pro
+          Khóa học Free
           <span class="labelCourse">Mới</span>
         </span>
       </h2>
+      <h3 class="flex items-center justify-center text-red-600 font-semibold">
+        Xem lộ trình
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-4 h-4 ml-1"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </h3>
     </div>
-    <div class="grid grid-cols-4">
+    <div class="flex flex-wrap">
       <section
+        class="w-[420px] flex"
         v-for="item in listCourseFree"
         :key="item.id"
       >
-        <section class="relative course_pro_item">
+        <section class="relative course_pro_item mr-6">
           <a
             class="course_link"
             href=""

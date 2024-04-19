@@ -1,12 +1,12 @@
 <template>
-  <div
-    class="fixed z-50 inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50"
-    v-if="isToggleModal"
-  >
-    <LoginModal />
-  </div>
   <div class="wrapper">
-    <Header />
+    <div
+      class="fixed z-50 inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50"
+      v-if="isToggleModal"
+    >
+      <LoginModal />
+    </div>
+    <Header class="z-40" />
     <div class="container">
       <SideBar />
       <div class="content">
