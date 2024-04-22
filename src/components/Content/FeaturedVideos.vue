@@ -154,6 +154,8 @@
     }
   }
   .posts {
+    margin: 70px 0px 0px 0px;
+    padding: 0px 44px 0px 40px;
     h2 {
       color: #242424;
       font-size: 1.5rem;

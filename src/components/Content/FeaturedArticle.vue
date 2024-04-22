@@ -3,7 +3,7 @@
     <h2>Bài viết nổi bật</h2>
     <div class="flex flex-wrap w-full">
       <section
-        class="flex"
+        class="flex w-[405px]"
         v-for="item in featuredArticle"
         :key="item.id"
       >
