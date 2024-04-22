@@ -10,7 +10,7 @@
     </div>
     <div class="flex">
       <section
-        class="w-full"
+        class="flex flex-wrap w-full"
         v-for="item in listCoursePro"
         :key="item.id"
       >

@@ -1,13 +1,13 @@
 <template>
   <div class="posts">
     <h2>Bài viết nổi bật</h2>
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap w-full">
       <section
-        class="w-[420px] flex"
+        class="flex"
         v-for="item in featuredArticle"
         :key="item.id"
       >
-        <section class="relative posts_pro_item mr-6">
+        <section class="relative posts_pro_item mx-3">
           <a
             class="posts_link"
             href=""

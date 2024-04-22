@@ -26,13 +26,13 @@
         </svg>
       </h3>
     </div>
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap justify-items-center">
       <section
-        class="w-[420px] flex"
+        class="justify-items-center w-[405px]"
         v-for="item in listCourseFree"
         :key="item.id"
       >
-        <section class="relative course_pro_item mr-6">
+        <section class="relative left-0 course_pro_item mx-3">
           <a
             class="course_link"
             href=""
@@ -130,7 +130,7 @@
     user-select: none;
     white-space: nowrap;
     z-index: 1;
-    left: 50%;
+    left: 55%;
     transform: translateX(-60%);
     opacity: 0;
     bottom: 30%;

@@ -14,6 +14,7 @@
   import CourseFree from '../Content/CourseFree.vue';
   import FeaturedArticle from '../Content/FeaturedArticle.vue';
   import FeaturedVideos from '../Content/FeaturedVideos.vue';
+  import Footer from '../Footer/Footer.vue';
 
   export default {
     components: {

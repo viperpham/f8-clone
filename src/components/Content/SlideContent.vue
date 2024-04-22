@@ -23,7 +23,7 @@
           :style="{
             backgroundImage: `linear-gradient(to right, ${item.bgFrom}, ${item.bgTo})`,
           }"
-          class="flex justify-between h-64 items-center rounded-xl mx-4 md:ml-7"
+          class="flex justify-between h-64 items-center rounded-xl"
         >
           <div class="text-white w-[640px] p-10">
             <h1 class="capitalize font-bold text-2xl md:text-3xl mb-3">

@@ -108,7 +108,8 @@ export const featuredArticle = [
     author: {
       name: 'Tien Pham Ngoc',
       profile_link: '/@tien-pham-ngoc',
-      avatar: '/static/media/fallback-avatar.155cdb2376c5d99ea151.jpg',
+      avatar:
+        'https://fullstack.edu.vn/static/media/fallback-avatar.155cdb2376c5d99ea151.jpg',
     },
     reading_time: '4 phút đọc',
   },

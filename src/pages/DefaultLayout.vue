@@ -14,12 +14,13 @@
       </div>
     </div>
   </div>
+  <Footer />
 </template>
 
 <script>
   import Header from '../components/Header/Header.vue';
   import SideBar from '../components/SideBar/SideBarNav.vue';
-  import Content from '../components/Content/SlideContent.vue';
+  import Footer from '../components/Footer/Footer.vue';
   import HomeWrapper from '../components/Home/HomeWrapper.vue';
   import LoginModal from '../components/Auth/LoginModal.vue';
   import { mapState, mapActions } from 'vuex';
@@ -30,6 +31,7 @@
       SideBar,
       LoginModal,
       HomeWrapper,
+      Footer,
     },
     setup() {
       return {};
@@ -47,11 +49,10 @@
   }
   .container {
     display: flex;
-    max-width: 100%;
   }
 
   .content {
     flex: 1;
-    padding: 0px 0px 0px 90px;
+    padding: 0px 44px 0px 44px;
   }
 </style>
