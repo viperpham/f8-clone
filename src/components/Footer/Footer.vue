@@ -65,24 +65,18 @@
         <div class="footer_text">
           <div class="footer_column">
             <h2>Công cụ</h2>
-            <ul>
-              Tạo CV xin việc
-            </ul>
-            <ul>
-              Rút gọn liên kết
-            </ul>
-            <ul>
-              Clip-path maker
-            </ul>
-            <ul>
-              Snipper generator
-            </ul>
-            <ul>
-              CSS Grid generator
-            </ul>
-            <ul>
-              Cảnh báo sờ tay lên mặt
-            </ul>
+            <li>
+              <a href=""> Tạo CV xin việc </a>
+            </li>
+            <li>
+              <a href=""> Rút gọn liên kết </a>
+            </li>
+            <li>
+              <a href=""> Clip-path maker </a>
+            </li>
+            <li><a href=""> Snipper generator </a></li>
+            <li><a href=""> CSS Grid generator </a></li>
+            <li><a href=""> Cảnh báo sờ tay lên mặt </a></li>
           </div>
         </div>
       </section>
@@ -91,25 +85,27 @@
           <div class="footer_column">
             <h2>Về F8</h2>
             <ul>
-              Giới thiệu
-            </ul>
-            <ul>
-              Liên hệ
-            </ul>
-            <ul>
-              Điều khoản
-            </ul>
-            <ul>
-              Bảo mật
-            </ul>
-            <ul>
-              Cơ hội việc làm
+              <li>
+                <a href=""> Giới thiệu </a>
+              </li>
+              <li>
+                <a href=""> Liên hệ </a>
+              </li>
+              <li>
+                <a href=""> Điều khoản </a>
+              </li>
+              <li>
+                <a href=""> Bảo mật </a>
+              </li>
+              <li>
+                <a href=""> Cơ hội việc làm </a>
+              </li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="w-full flex justify-center">
-        <div class="footer_text footer_column">
+      <section class="flex justify-center">
+        <div class="footer_text footer_column w-[257px]">
           <h2>Công ty cổ phần công nghệ giáo dục F8</h2>
           <p>Mã số thuế: 0109922901</p>
           <p>Ngày thành lập: 04/03/2022</p>
@@ -212,6 +208,9 @@
     font-weight: 600;
     color: #fff;
     margin-top: 10px;
+  }
+  li {
+    list-style-type: none;
   }
   h2 {
     font-weight: 600;

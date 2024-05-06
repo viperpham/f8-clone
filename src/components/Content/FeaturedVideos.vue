@@ -3,7 +3,7 @@
     <h2>Videos nổi bật</h2>
     <div class="flex flex-wrap">
       <section
-        class="w-[410px] flex"
+        class="w-[405px] flex"
         v-for="item in trending"
         :key="item.id"
       >
@@ -20,10 +20,10 @@
                 alt="HTML CSS Pro"
               />
               <div
-                class="absolute flex items-center justify-between z-50 left-0 bottom-0 p-4 right-0"
+                class="absolute flex items-center justify-between z-40 left-0 bottom-0 p-4 right-0"
               >
                 <div
-                  class="bg-white w-9 h-9 flex justify-center items-center rounded-xl"
+                  class="bg-white w-9 h-9 flex justify-center items-center rounded-xl z-0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@
     }
   }
   .posts {
-    margin: 70px 0px 0px 0px;
+    margin: 70px 0px 50px 0px;
     padding: 0px 44px 0px 40px;
     h2 {
       color: #242424;

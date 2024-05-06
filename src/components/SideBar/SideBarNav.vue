@@ -1,8 +1,8 @@
 <template>
   <div
-    class="side-bar-nav sticky top-[74px] flex items-center flex-col h-screen z-40"
+    class="side-bar-nav sticky top-[74px] pl-2 h-full left-0 flex items-center flex-col z-40"
   >
-    <div class="p-4 text-black">
+    <div class="text-black">
       <div
         class="flex relative items-center justify-center bg-blue-600 border border-blue-600 rounded-full text-white cursor-pointer h-11 w-11 my-5 mx-auto mt-2 select-none hover:bg-blue-700"
         @click="toggle"
@@ -60,13 +60,16 @@
       </div>
 
       <ul
-        v-for="(item, index) in navLink"
-        :key="index"
+        v-for="item in navLink"
+        :key="item.path"
         class="w-[72px] h-[72px] my-2 rounded-2xl flex items-center justify-center"
+        @click="setCurrentRoute(item.path)"
       >
         <router-link
           :to="item.path"
-          :class="{ 'bg-gray-200 rounded-2xl': item.path === '/' }"
+          :class="{
+            'bg-gray-200 rounded-2xl': item.path === currentRoute,
+          }"
         >
           <li
             class="py-4 text-xs font-medium flex flex-col items-center justify-center rounded-2xl w-[72px] h-[72px] cursor-pointer hover:bg-zinc-100 transition-all duration-200"
@@ -96,6 +99,7 @@
 </template>
 
 <script>
+  import { getCurrentInstance } from 'vue';
   import { icons } from '../../constants/navLink.js';
   import { useRoute, useRouter } from 'vue-router';
 
@@ -103,6 +107,7 @@
     data() {
       return {
         isOpen: false,
+        currentRoute: '',
         navLink: [
           {
             title: 'Home',
@@ -122,6 +127,9 @@
         ],
       };
     },
+    created() {
+      this.currentRoute = this.$route.path;
+    },
     methods: {
       toggle() {
         this.isOpen = !this.isOpen;
@@ -129,12 +137,15 @@
       stopPropagation(event) {
         event.stopPropagation();
       },
+      setCurrentRoute(path) {
+        this.currentRoute = path;
+      },
     },
   };
 </script>
 
 <style scoped>
   .side-bar-nav {
-    width: 90px;
+    width: 80px;
   }
 </style>

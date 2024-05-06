@@ -80,7 +80,6 @@
 
   export default {
     setup() {
-      console.log(listCourseFree);
       return {
         listCourseFree,
       };

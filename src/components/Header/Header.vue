@@ -4,19 +4,48 @@
   >
     <div class="flex justify-between flex-row space-x-4 w-full mx-auto">
       <!-- Logo và tiêu đề -->
-      <div class="flex items-center">
+      <div class="flex items-center flex-1">
         <img
           class="w-9 h-9 rounded-lg shadow-xl object-cover mr-1"
           src="../../assets/img/f8.png"
           alt="F8 - Học lập trình để đi làm"
         />
-        <h1 class="text-center text-sm tracking-widest font-bold ml-4">
+        <h1
+          v-if="!isHome"
+          class="text-center text-sm tracking-widest font-bold ml-4"
+        >
+          <a
+            @click="goBack"
+            class="go_back text-slate-500 cursor-pointer flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              />
+            </svg>
+            Quay lại
+          </a>
+        </h1>
+        <!-- Tiêu đề cho trang chủ -->
+        <h1
+          v-else
+          class="text-center text-sm tracking-widest font-bold ml-4"
+        >
           Học lập trình để đi làm
         </h1>
       </div>
 
       <!-- Ô tìm kiếm -->
-      <div class="flex w-[420px] h-[40px] pr-4">
+      <div class="flex justify-center w-[420px] h-[40px] pr-4">
         <div
           class="absolute flex items-center justify-center w-[350px] m-auto border-2 border-gray-300 p-1 rounded-full bg-white"
         >
@@ -43,7 +72,7 @@
       </div>
 
       <!-- Đăng nhập và đăng ký -->
-      <div class="flex justify-end items-center mr-10">
+      <div class="flex justify-end items-center mr-10 flex-1">
         <div class="flex gap-4">
           <button class="btn-login">Đăng nhập</button>
           <button
@@ -64,12 +93,21 @@
   import { computed } from 'vue';
 
   export default {
+    props: {
+      isHome: {
+        type: Boolean,
+        required: true,
+      },
+    },
     components: {
       LoginMoal,
     },
 
     methods: {
       ...mapActions(['openLoginModal']),
+      goBack() {
+        this.$router.go(-1);
+      },
     },
     setup() {
       const store = useStore();
@@ -93,5 +131,12 @@
 
   .btn-register:hover {
     opacity: 0.9;
+  }
+
+  .go_back:hover svg {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transform: translateX(-3px);
   }
 </style>

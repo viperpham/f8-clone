@@ -80,9 +80,7 @@
       SwiperSlide,
     },
     setup() {
-      const onSwiper = (swiper) => {
-        console.log(swiper);
-      };
+      const onSwiper = (swiper) => {};
       const onSlideChange = () => {};
       return {
         onSwiper,
@@ -94,10 +92,20 @@
 </script>
 
 <style>
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+  }
   .slide-show {
     height: 270px;
-
     width: 1708px;
+    position: relative;
   }
 
   @media screen and (max-width: 1300px) {
@@ -124,7 +132,11 @@
   }
 
   .swiper-button-next {
-    transform: translateX(10px);
+    transform: translateX(20px);
+  }
+
+  .swiper-button-prev {
+    transform: translateX(-20px);
   }
 
   /* Thiết lập kích thước và định dạng cho .swiper-pagination-bullet */

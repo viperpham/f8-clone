@@ -6,11 +6,14 @@
     >
       <LoginModal />
     </div>
-    <Header class="z-40" />
+    <Header
+      class="z-40"
+      :isHome="false"
+    />
     <div class="container">
       <SideBar />
       <div class="content">
-        <HomeWrapper />
+        <slot></slot>
       </div>
     </div>
   </div>
